@@ -73,6 +73,12 @@ streamlit run app.py
 
 https://sprint4-apputo-dados-zoologico-88ypjnndzi5tomdwf9g2me.streamlit.app/
 
+## Interface da Aplicação
+<img width="1845" height="888" alt="image" src="https://github.com/user-attachments/assets/19e5a1d9-6057-47e7-a4c5-fa5cefa24a87" />
+
+
+
+
 ---
 
 ## Observações
