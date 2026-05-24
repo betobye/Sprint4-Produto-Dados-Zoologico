@@ -1,57 +1,67 @@
 # Sprint 4 – Produto de Dados com Explicabilidade
 
-## Projeto
-Previsão de visitação diária para um zoológico, transformando o modelo da Sprint 3 em um produto de dados funcional com Streamlit.
+Projeto desenvolvido para a Sprint 4 da disciplina de Inteligência Artificial / Machine Learning da FIAP.
 
-## Objetivo
-A aplicação permite prever a quantidade estimada de visitantes em uma data escolhida e explicar quais variáveis influenciaram a previsão usando SHAP.
+O objetivo do trabalho foi transformar o modelo criado na Sprint 3 em um produto de dados funcional, permitindo prever a quantidade de visitantes de um zoológico e apresentar explicações sobre os fatores que mais influenciaram a previsão.
 
-## Foco escolhido
-**Previsão de visitantes por regressão.**
+Sobre o projeto
 
-Esse foco foi escolhido porque a Sprint 3 já possuía um pipeline completo de regressão, com feature engineering, tuning, avaliação em holdout e interpretabilidade.
+A aplicação foi desenvolvida em Streamlit e utiliza um modelo de regressão treinado com dados sintéticos de visitação diária ao longo de 2023.
 
-## Funcionalidades
-- Entrada por data.
-- Identificação de fim de semana, feriado, mês, trimestre, dia do ano e estação.
-- Previsão da quantidade de visitantes.
-- Classificação operacional da demanda em baixa, média ou alta.
-- Explicação local com SHAP.
-- Recomendação de decisão operacional para o totem.
-- Avaliação crítica sobre limitações e melhorias.
+Além da previsão, o sistema também utiliza SHAP para explicar quais variáveis tiveram maior impacto no resultado apresentado.
 
-## Como executar
+Exemplos:
 
-Instale as dependências:
+fim de semana
+verão
+sazonalidade
+feriados
+Tecnologias utilizadas
+Python
+Pandas
+Scikit-learn
+Streamlit
+SHAP
+Matplotlib
+Funcionalidades
 
-```bash
+A aplicação permite:
+
+selecionar uma data
+prever a quantidade de visitantes
+classificar o nível de demanda
+visualizar fatores que influenciaram a previsão
+Estrutura do projeto
+app.py → aplicação Streamlit
+train_model.py → treinamento do modelo
+modelo_visitantes.pkl → modelo salvo
+dados_zoologico.csv → base de dados
+Sprint3_Modelagem_Avancada_Zoologico.ipynb → notebook da Sprint 3
+Como executar
+
+Instalar dependências:
+
 pip install -r requirements.txt
-```
 
-Treine o modelo, caso necessário:
+Executar aplicação:
 
-```bash
-python train_model.py
-```
-
-Execute o aplicativo:
-
-```bash
 streamlit run app.py
-```
+Observações
 
-## Arquivos
+Os dados utilizados são sintéticos e foram gerados apenas para fins acadêmicos.
 
-- `app.py`: aplicação Streamlit.
-- `train_model.py`: script de criação da base sintética e treinamento do modelo.
-- `modelo_visitantes.pkl`: modelo treinado e artefatos necessários para previsão e SHAP.
-- `dados_zoologico.csv`: base sintética usada no projeto.
-- `requirements.txt`: dependências do projeto.
+O projeto tem como foco demonstrar:
 
-## Conexão com o negócio
+pipeline de machine learning
+tuning de modelos
+interpretabilidade
+uso prático de IA em apoio à tomada de decisão
 
-O produto ajuda o totem e a operação do zoológico a antecipar dias de maior fluxo. Com isso, é possível planejar melhor a equipe, organizar filas, preparar comunicação para visitantes e apoiar decisões operacionais.
+## URL Streamlit
+https://sprint4-apputo-dados-zoologico-88ypjnndzi5tomdwf9g2me.streamlit.app/
 
-## Limitações
+
+
+
 
 A base utilizada é sintética e foi construída para fins acadêmicos. Em uma aplicação real, seria necessário treinar o modelo com dados históricos reais de visitação, clima, eventos, feriados, campanhas, férias escolares e outras variáveis externas.
